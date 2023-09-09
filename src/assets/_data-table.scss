@@ -1,0 +1,30 @@
+.data-table {
+	
+
+	&__heads {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: 25px;
+	}
+	
+	&__head {
+		border: 1px solid grey;
+		text-align: center;
+		padding: 5px 15px;
+		background-color: lightgrey;
+	}
+
+	&__paginator {
+		margin-top: 25px;
+	}
+
+	@media (max-width: 768px) {
+		&__heads {
+			display: none;
+		}
+	}
+}
+
