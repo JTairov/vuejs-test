@@ -1,4 +1,6 @@
 export function useFormatMoney(money) {
+  if (!money) return { result: '', money: undefined}
+  
   let integerStr;
   let decimalsStr;
   if (String(money).includes('.')) {
