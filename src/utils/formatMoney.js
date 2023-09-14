@@ -1,5 +1,4 @@
 export function useFormatMoney(money) {
-  // console.log(money)
   let integerStr;
   let decimalsStr;
   if (String(money).includes('.')) {
@@ -8,8 +7,8 @@ export function useFormatMoney(money) {
   } else {
     integerStr = `${parseInt(money, 10)}`;
   }
-  // console.log(integerStr)
-  // console.log(decimalsStr)
+  console.log(integerStr)
+  console.log(decimalsStr)
 
   const resultArr = [];
   let current = '';
@@ -38,6 +37,8 @@ export function useFormatMoney(money) {
   } else {
     result = resultArr.join('');
   }
+
+  money = decimalsStr && decimalsStr.length === 1 ? parseInt(integerStr + decimalsStr) : parseFloat(integerStr + decimalsStr);
 
   return { result, money };
 }
